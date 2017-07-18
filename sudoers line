@@ -1,0 +1,5 @@
+www-data ALL=(USERNAMERUNNINGFLEXGET) NOPASSWD:/scripts/showseries.sh
+#Include this line into your sudoers file if your flexget is not using the www-data user
+#note: without this line when showseries.sh is executed flexget will attempt to run as www-data user instead of your user
+#change USERNAMERUNNINGFLEXGET to the username that you use when using flexget commands
+#change /scripts/showseries.sh to the location of the showseries.sh

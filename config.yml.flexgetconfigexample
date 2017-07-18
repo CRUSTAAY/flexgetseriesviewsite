@@ -1,0 +1,41 @@
+web_server:
+  bind: 10.0.0.2
+  port: 3539
+  web_ui: yes
+templates:
+  trans:
+    disable: seen
+    transmission:
+      host: 10.0.0.2
+      port: 9091
+      username: myusername
+      password: mypassword
+      ratio: 50
+      addpaused: No
+schedules:
+  - tasks: '*'
+    interval:
+      minutes: 5
+tasks:
+  my friends movie series:
+    disable: seen_info_hash
+    template:
+      - trans
+    rss: http://homegrownexamplemovies.com/rss.php?example=69
+    series:
+      settings:
+        seriesgroup:
+          quality: 720p
+          path: /indiemovies/homegrown/{{series_name}}
+      seriesgroup:
+        - my everyday movie
+        - dank memes the second cumming
+        - my little example - season 69
+        - exampletext!
+  that one hipster guy:
+    template:
+      - trans
+    rss: https://iamahipsterguyithink.com/?page=rss&q=memes
+    series:
+      - memes - the anime:
+          path: /indiemovies/{{series_name}}
