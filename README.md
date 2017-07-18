@@ -20,7 +20,8 @@ step 2) put showseries.sh somewhere, make sure it can be executed, note down its
 
 step 3) open your sudoers file and add in the line listed in the file 'sudoers line', substituting values where required (i.e the username and location)
 
-step 4) put your index.php somewhere that it can be viewed as a webpage (i use /var/www/html/series/index.php, giving me http://mydomain.com/series/)
+step 4) put your index.php somewhere that it can be viewed as a webpage (i use /var/www/html/series/index.php, giving me http://mydomain.com/series/) 
+change the line "exec('sudo -u USERNAMERUNNINGFLEXGET -H /scripts/showseries.sh', $out);" as needed (note: -H is required, it changes the home directory so that flexget series list works)
 
 
 
